@@ -39,16 +39,12 @@ const FormsyAutoComplete = createClass({
   },
 
   handleChange: function handleChange(event) {
-    this.setValue({
-      value: event.currentTarget.value,
-    });
+    this.setValue(event.currentTarget.value);
     if (this.props.onChange) this.props.onChange(event);
   },
 
   handleUpdateInput: function handleUpdateInput(value) {
-    this.setValue({
-      value,
-    });
+    this.setValue(value);
     if (this.props.onChange) this.props.onChange(null, value);
   },
 
